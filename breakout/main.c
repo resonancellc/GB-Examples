@@ -1,9 +1,21 @@
 #include <gb/gb.h>
 #include "player.h"
+#include "ball.h"
+
+Object player;
+Object ball;
+
+
+void draw() {
+        draw_obj(&player);
+        draw_obj(&ball);
+}
 
 void main() {
         //box(20, 20, 40, 40, 1);
-        Object player;
         init_player(&player);
-        player.draw();
+        init_ball(&ball);
+        draw();
+
+        
 }
