@@ -2,11 +2,17 @@
 #define _Object_H
 #include "vector.h"
 
+typedef enum {PLAYER, BALL, BLOCK} ObjectType;
+
 typedef struct {
     Vector location;
     int width;
     int height;
+    ObjectType type;
 } Object;
 
-void draw_obj(Object *obj);
+
+
+void init_obj_sprite(Object *obj, int id);
+void update_obj_sprite(Object *obj);
 #endif

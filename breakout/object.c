@@ -1,11 +1,15 @@
 #include "object.h"
-#include <gb/drawing.h>
+#include "ball.h"
+#include "player.h"
 
-void draw_obj(Object *obj) {
-    int x = obj->location.x;
-    int y = obj->location.y;
-    int x2 = x + obj->width;
-    int y2 = y + obj->height;
+void init_obj_sprite(Object *obj, int id) {
+    if (obj->type == BALL) {
+        init_ball_sprite(obj, id);
+    } else if (obj->type == PLAYER) {
+        init_player_sprite(obj, id);
+    }
+}
 
-    box(x, y, x2, y2, 1);
+void update_obj_sprite(Object *obj) {
+    obj->location.x = 1;
 }

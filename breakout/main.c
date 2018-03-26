@@ -1,21 +1,24 @@
 #include <gb/gb.h>
 #include "player.h"
 #include "ball.h"
+#include "object.h"
 
 Object player;
 Object ball;
 
 
 void draw() {
-        draw_obj(&player);
-        draw_obj(&ball);
+        init_obj_sprite(&ball, 0);
+        init_obj_sprite(&player, 2);
 }
 
 void main() {
-        //box(20, 20, 40, 40, 1);
+        SPRITES_8x8;
         init_player(&player);
         init_ball(&ball);
-        draw();
+        SHOW_SPRITES;
 
+        draw();
+       
         
 }
