@@ -10,6 +10,16 @@ void init_obj_sprite(Object *obj, int id) {
     }
 }
 
-void update_obj_sprite(Object *obj) {
-    obj->location.x = 1;
+void update_obj_sprite(Object *obj, int id) {
+    if (obj->type == BALL) {
+        update_ball_sprite(obj, id);
+    } else if (obj->type == PLAYER) {
+        update_player_sprite(obj, id);
+    }
+}
+
+void update_obj(Object *obj) {
+    if (obj->type == BALL) {
+        update_ball(obj);
+    } 
 }
