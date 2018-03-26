@@ -1,1 +1,1 @@
- lcc -Wa-l -Wl-m -o ./build/breakout.gb main.c vector.c object.c player.c ball.c ./graphics/sprites.c
+ lcc -Wa-l -Wl-m -o ./build/breakout.gb ./src/main.c ./src/vector.c ./src/object.c ./src/player.c ./src/ball.c ./src/graphics/sprites.c
