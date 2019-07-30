@@ -1,6 +1,6 @@
 #include "player.h"
 #include <gb/gb.h>
-#include "./graphics/sprites.h"
+#include "./sprites.h"
 
 void init_player(Object *obj) {
     obj->location.x = 60;

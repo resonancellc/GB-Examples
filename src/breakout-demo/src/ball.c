@@ -1,6 +1,6 @@
 #include "ball.h"
 #include <gb/gb.h>
-#include "./graphics/sprites.h"
+#include "./sprites.h"
 
 void init_ball(Object *obj) {
     obj->location.x = 75;
